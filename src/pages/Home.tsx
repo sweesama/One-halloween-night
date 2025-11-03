@@ -11,6 +11,10 @@ function Home() {
     window.open('https://ollienoseworthy.itch.io/one-halloween-night', '_blank')
   }
 
+  const handleDownloadClick = () => {
+    window.open('https://download.onehalloweennight.net/game.zip', '_blank')
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-halloween-dark via-halloween-purple to-halloween-dark">
       {/* Hero Section - 极简首屏（参考竞品）*/}
@@ -41,17 +45,28 @@ function Home() {
             </div>
           </div>
 
-          {/* 大按钮CTA（参考竞品）*/}
-          <button
-            onClick={handlePlayClick}
-            className="bg-halloween-orange hover:bg-halloween-light text-white text-3xl font-bold px-16 py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl halloween-title inline-block mb-4"
-          >
-            PLAY NOW
-          </button>
+          {/* 双按钮CTA - 直接下载 + itch.io */}
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-6">
+            <button
+              onClick={handleDownloadClick}
+              className="bg-halloween-orange hover:bg-halloween-light text-white text-2xl md:text-3xl font-bold px-12 md:px-16 py-5 md:py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl halloween-title inline-flex items-center gap-3"
+            >
+              <span>⬇️</span>
+              <span>DOWNLOAD NOW</span>
+            </button>
+            
+            <button
+              onClick={handlePlayClick}
+              className="bg-halloween-purple border-2 border-halloween-orange hover:bg-halloween-orange text-white text-xl md:text-2xl font-bold px-10 md:px-12 py-4 md:py-5 rounded-full transform hover:scale-105 transition-all duration-300 shadow-xl halloween-title"
+            >
+              Play on itch.io
+            </button>
+          </div>
           
-          <p className="text-halloween-light text-sm">
-            on itch.io • Free Forever
-          </p>
+          <div className="text-halloween-light text-sm space-y-1">
+            <p className="font-semibold">✓ Direct Download (668MB) • Windows/Mac/Linux</p>
+            <p className="opacity-80">100% Free Forever • No Ads • No Registration Required</p>
+          </div>
         </div>
       </section>
 

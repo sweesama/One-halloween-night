@@ -18,7 +18,7 @@
 
 ## ✅ 已完成的优化
 
-### 2025-11-03 SEO深度优化 + AI可见性优化
+### 2025-11-03 SEO深度优化 + AI可见性优化 + CDN直接下载
 - ✅ **Title优化**: 添加"Game"关键词 + 4.7★社会证明
 - ✅ **Meta Description**: 突出"FREE"、评分、游戏时长
 - ✅ **H1优化**: "One Halloween Night Game"（强化主关键词）
@@ -30,6 +30,11 @@
 - ✅ **AI优化 - robots.txt**: 支持ChatGPT、Claude、Gemini、Perplexity等AI爬虫
 - ✅ **AI优化 - llms.txt**: 结构化内容帮助AI理解网站
 - ✅ **AI优化 - llms-full.txt**: 详细内容供AI深度查询
+- ✅ **R2 CDN直接下载**: 上传游戏文件到Cloudflare R2（668MB）
+- ✅ **自定义域名**: download.onehalloweennight.net
+- ✅ **首页下载按钮**: 添加"DOWNLOAD NOW"主按钮
+- ✅ **Download SEO**: 添加16个download相关关键词
+- ✅ **CDN优化**: 配置页面规则，缓存1个月，全球加速
 
 ### 2025-11-01 基础SEO优化
 - ✅ 20+ 关键词覆盖

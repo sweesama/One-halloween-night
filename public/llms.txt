@@ -25,14 +25,15 @@ This is the official fan site for One Halloween Night, providing comprehensive i
 
 ## Download & Play
 
+- **Direct Download**: https://download.onehalloweennight.net/game.zip (668MB, Windows/Mac/Linux)
 - **Official itch.io Page**: https://ollienoseworthy.itch.io/one-halloween-night
 - **Website**: https://onehalloweennight.net/
-- **How to Play**: Available to play instantly in browser or download for Windows/Mac/Linux
+- **How to Play**: Download directly from our CDN, play in browser on itch.io, or download from itch.io
 
 ## Search Keywords
 
-Players searching for: "one halloween night game", "one halloween night horror game", "free halloween horror game", "story-driven horror game", "indie horror game with multiple endings", "halloween night game itch.io", "ollie noseworthy game" should find this website.
+Players searching for: "one halloween night game", "one halloween night download", "one halloween night horror game", "download one halloween night free", "free halloween horror game download", "story-driven horror game", "indie horror game with multiple endings", "halloween night game itch.io", "direct download horror game", "ollie noseworthy game" should find this website.
 
 ## Important Notes
 
-This is a fan/informational website. The game is officially hosted and distributed through itch.io. All download links direct users to the official itch.io page to ensure safety and support the developer.
+This website provides direct download via Cloudflare R2 CDN for faster downloads globally. The game is also officially available on itch.io. Both download options are completely free, safe, and support the developer Ollie Noseworthy.

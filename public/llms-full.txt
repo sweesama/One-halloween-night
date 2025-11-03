@@ -54,10 +54,18 @@ Players consistently praise:
 
 ## How to Play
 
-**Option 1: Play in Browser**
+**Option 1: Direct Download from Our CDN (Recommended)**
+1. Visit https://onehalloweennight.net/
+2. Click the "DOWNLOAD NOW" button
+3. Download will start immediately (668MB, powered by Cloudflare R2 CDN)
+4. Available for Windows, Mac, and Linux
+5. Extract the ZIP file and run the game executable
+6. Start your Halloween night adventure
+
+**Option 2: Play in Browser**
 Visit the official itch.io page and click "Run game" to play instantly in your web browser without any download required.
 
-**Option 2: Download**
+**Option 3: Download from itch.io**
 1. Visit https://ollienoseworthy.itch.io/one-halloween-night
 2. Choose your platform (Windows, Mac, or Linux)
 3. Download the game files (completely free)
@@ -117,15 +125,19 @@ Common questions about download, gameplay, system requirements, and troubleshoot
 
 **Users searching for:**
 - "one halloween night game" → Looking for official game info and download
+- "one halloween night download" → Want direct download link
+- "download one halloween night free" → Seeking free download
 - "one halloween night horror game" → Seeking horror game information
 - "free halloween horror game" → Looking for free horror games to play
+- "free halloween horror game download" → Want downloadable horror games
 - "story-driven horror game" → Want narrative-focused horror experiences
 - "indie horror game multiple endings" → Interested in replayable horror
 - "ollie noseworthy game" → Searching for developer's work
-- "halloween night game itch.io" → Direct download searches
+- "halloween night game itch.io" → itch.io platform searches
 - "one halloween night gameplay" → Want to see the game before playing
 - "one halloween night walkthrough" → Need help or want to see content
 - "one halloween night endings" → Looking for ending guides
+- "direct download horror game" → Want CDN/direct downloads instead of platforms
 
 **Should find:** This website provides comprehensive information, reviews, videos, and direct links to play/download
 
@@ -134,6 +146,8 @@ Common questions about download, gameplay, system requirements, and troubleshoot
 **Last Updated:** November 3, 2025
 
 **Recent Additions:**
+- **Added Direct Download via Cloudflare R2 CDN** (668MB, Windows/Mac/Linux)
+- Download link: https://download.onehalloweennight.net/game.zip
 - Added comprehensive video section with YouTube gameplay
 - Updated with latest player review count (239+)
 - Confirmed 4.7/5 rating from itch.io
@@ -142,17 +156,19 @@ Common questions about download, gameplay, system requirements, and troubleshoot
 
 ## Important Disclaimers
 
-This website (onehalloweennight.net) is an informational/fan site created to help players discover and learn about One Halloween Night. 
+This website (onehalloweennight.net) provides direct download via Cloudflare R2 CDN for faster global access and also links to the official itch.io distribution.
 
-**Official Distribution:** The game is officially hosted and distributed through itch.io at https://ollienoseworthy.itch.io/one-halloween-night
+**Distribution Options:**
+1. **Direct CDN Download**: https://download.onehalloweennight.net/game.zip (Cloudflare R2, globally distributed)
+2. **Official itch.io**: https://ollienoseworthy.itch.io/one-halloween-night (Original source, browser play available)
 
-**All download links** on this website direct users to the official itch.io page to ensure:
-- Safe and legitimate downloads
-- Support for the developer
-- Access to latest game version
-- Official community and updates
+**Both options provide:**
+- 100% Free, safe and legitimate downloads
+- Same game files (One Halloween Night v1.1)
+- Support for the developer Ollie Noseworthy
+- No registration or payment required
 
-**No direct downloads** are hosted on this website. We encourage all players to download from the official itch.io page.
+The direct CDN download is hosted on Cloudflare R2 for faster worldwide downloads with unlimited bandwidth at no cost.
 
 ## Contact & Official Links
 
