@@ -8,9 +8,26 @@
 - **引导下载**：通过醒目的 Play 按钮引导用户到 itch.io 下载游戏
 - **广告变现**：预留 Google AdSense 广告位，通过流量获得收益
 
-## ✅ 已完成的优化（2025-11-01）
+## 📊 SEO表现（2025-11-03更新）
 
-### SEO 优化
+### Google Search Console数据
+- **one halloween night**: 23展现 / 0点击 → 需持续优化
+- **one halloween night game**: 6展现 / 1点击（16.7%） → 主要优化目标
+- **one halloween night horror game**: 2展现 / 1点击（50%） → 表现优秀
+- **排名趋势**: 已进入前30名，持续爬升中
+
+## ✅ 已完成的优化
+
+### 2025-11-03 SEO深度优化
+- ✅ **Title优化**: 添加"Game"关键词 + 4.7★社会证明
+- ✅ **Meta Description**: 突出"FREE"、评分、游戏时长
+- ✅ **H1优化**: "One Halloween Night Game"（强化主关键词）
+- ✅ **Keywords优化**: 针对GSC数据，强化"game"相关长尾词
+- ✅ **首页YouTube视频**: 增加用户停留时间
+- ✅ **Videos页面**: 新增独立视频展示页（iframe嵌入，0流量成本）
+- ✅ **真实数据更新**: 4.7/5评分，239+评论，20-40分钟时长
+
+### 2025-11-01 基础SEO优化
 - ✅ 20+ 关键词覆盖
 - ✅ JSON-LD 结构化数据（VideoGame Schema）
 - ✅ Open Graph 社交分享优化
