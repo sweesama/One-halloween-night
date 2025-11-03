@@ -18,7 +18,7 @@
 
 ## ✅ 已完成的优化
 
-### 2025-11-03 SEO深度优化
+### 2025-11-03 SEO深度优化 + AI可见性优化
 - ✅ **Title优化**: 添加"Game"关键词 + 4.7★社会证明
 - ✅ **Meta Description**: 突出"FREE"、评分、游戏时长
 - ✅ **H1优化**: "One Halloween Night Game"（强化主关键词）
@@ -26,6 +26,10 @@
 - ✅ **首页YouTube视频**: 增加用户停留时间
 - ✅ **Videos页面**: 新增独立视频展示页（iframe嵌入，0流量成本）
 - ✅ **真实数据更新**: 4.7/5评分，239+评论，20-40分钟时长
+- ✅ **sitemap.xml更新**: 添加所有6个页面，Videos页面优先级0.9
+- ✅ **AI优化 - robots.txt**: 支持ChatGPT、Claude、Gemini、Perplexity等AI爬虫
+- ✅ **AI优化 - llms.txt**: 结构化内容帮助AI理解网站
+- ✅ **AI优化 - llms-full.txt**: 详细内容供AI深度查询
 
 ### 2025-11-01 基础SEO优化
 - ✅ 20+ 关键词覆盖

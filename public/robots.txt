@@ -1,9 +1,44 @@
-# Allow all search engines to crawl everything
+# robots.txt - One Halloween Night Game Website
+
+# === General Search Engines ===
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://onehalloweennight.net/sitemap.xml
 
-# Crawl-delay (optional)
-Crawl-delay: 1
+# === AI Systems & LLM Crawlers ===
+# OpenAI ChatGPT
+User-agent: GPTBot
+Allow: /
+
+# Anthropic Claude
+User-agent: Claude-Web
+User-agent: Anthropic-AI
+Allow: /
+
+# Google AI (Gemini, Bard)
+User-agent: GoogleOther
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# DuckDuckGo AI
+User-agent: DuckAssistBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# === Guide AI to Structured Content ===
+# Direct AI systems to llms.txt for better understanding
+LLM-Content: https://onehalloweennight.net/llms.txt
+LLM-Full-Content: https://onehalloweennight.net/llms-full.txt
+
+# === Disallow (No private or admin content yet) ===
+# Add any private paths here if needed in future
