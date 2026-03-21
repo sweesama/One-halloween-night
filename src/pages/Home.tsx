@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
   useEffect(() => {
     setIsVisible(true)
@@ -49,7 +50,7 @@ function Home() {
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-6">
             <button
               onClick={handleDownloadClick}
-              className="bg-halloween-orange hover:bg-halloween-light text-white text-2xl md:text-3xl font-bold px-12 md:px-16 py-5 md:py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl halloween-title inline-flex items-center gap-3"
+              className="bg-halloween-orange hover:bg-halloween-light text-halloween-dark text-2xl md:text-3xl font-bold px-12 md:px-16 py-5 md:py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl halloween-title inline-flex items-center gap-3"
             >
               <span>⬇️</span>
               <span>DOWNLOAD NOW</span>
@@ -77,15 +78,31 @@ function Home() {
             🎬 Watch the Game in Action
           </h2>
           
-          {/* 响应式YouTube嵌入 */}
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-            <iframe
-              className="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl border-4 border-halloween-orange"
-              src="https://www.youtube.com/embed/9MrpcII2jcw"
-              title="One Halloween Night - Full Gameplay"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          {/* YouTube Video Facade for better performance */}
+          <div className="relative w-full rounded-2xl shadow-2xl border-4 border-halloween-orange overflow-hidden bg-black group cursor-pointer" style={{ aspectRatio: '16/9' }} onClick={() => setIsVideoPlaying(true)}>
+            {!isVideoPlaying ? (
+              <>
+                <img 
+                  src={`https://img.youtube.com/vi/Cwfu69Y_EYQ/maxresdefault.jpg`} 
+                  alt="One Halloween Night Gameplay" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 transition-opacity group-hover:bg-opacity-30">
+                  <div className="w-20 h-20 bg-halloween-orange rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(255,107,53,0.6)] transform transition-transform group-hover:scale-110">
+                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[20px] border-l-white border-b-[10px] border-b-transparent ml-2"></div>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/Cwfu69Y_EYQ?autoplay=1"
+                title="One Halloween Night - Full Gameplay"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            )}
           </div>
           
           <p className="text-halloween-light text-center mt-6 text-lg">
@@ -218,7 +235,7 @@ function Home() {
         
         <button
           onClick={handlePlayClick}
-          className="bg-halloween-orange hover:bg-halloween-light text-white text-2xl font-bold px-12 py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl mb-4"
+          className="bg-halloween-orange hover:bg-halloween-light text-halloween-dark text-2xl font-bold px-12 py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl mb-4"
         >
           🎮 PLAY NOW - FREE 🎮
         </button>

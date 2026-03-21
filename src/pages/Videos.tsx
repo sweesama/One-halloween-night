@@ -1,3 +1,57 @@
+import { useState } from 'react'
+
+function VideoItem({ video }: { video: any }) {
+  const [isPlaying, setIsPlaying] = useState(false)
+  
+  return (
+    <div className="bg-halloween-dark bg-opacity-60 backdrop-blur-sm p-6 rounded-2xl border-2 border-halloween-orange">
+      {/* Video Category Badge */}
+      <div className="mb-4">
+        <span className="inline-block bg-halloween-orange text-halloween-dark px-4 py-1 rounded-full text-sm font-bold">
+          {video.category}
+        </span>
+      </div>
+
+      {/* Video Title */}
+      <h2 className="text-2xl md:text-3xl font-bold text-halloween-orange mb-4">
+        {video.title}
+      </h2>
+
+      {/* Video Player Facade */}
+      <div className="relative w-full mb-4 rounded-xl overflow-hidden bg-black group cursor-pointer" style={{ aspectRatio: '16/9' }} onClick={() => setIsPlaying(true)}>
+        {!isPlaying ? (
+          <>
+            <img 
+              src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} 
+              alt={video.title} 
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 transition-opacity group-hover:bg-opacity-30">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-halloween-orange rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(255,107,53,0.6)] transform transition-transform group-hover:scale-110">
+                <div className="w-0 h-0 border-t-[8px] md:border-t-[10px] border-t-transparent border-l-[16px] md:border-l-[20px] border-l-white border-b-[8px] md:border-b-[10px] border-b-transparent ml-2"></div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <iframe
+            className="w-full h-full"
+            src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+            title={video.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        )}
+      </div>
+
+      {/* Video Description */}
+      <p className="text-halloween-light text-lg leading-relaxed">
+        {video.description}
+      </p>
+    </div>
+  )
+}
+
 function Videos() {
   const handlePlayClick = () => {
     window.open('https://ollienoseworthy.itch.io/one-halloween-night', '_blank')
@@ -44,35 +98,7 @@ function Videos() {
         <div className="max-w-6xl mx-auto mb-16">
           <div className="grid md:grid-cols-1 gap-12">
             {videos.map((video, idx) => (
-              <div key={idx} className="bg-halloween-dark bg-opacity-60 backdrop-blur-sm p-6 rounded-2xl border-2 border-halloween-orange">
-                {/* Video Category Badge */}
-                <div className="mb-4">
-                  <span className="inline-block bg-halloween-orange text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    {video.category}
-                  </span>
-                </div>
-
-                {/* Video Title */}
-                <h2 className="text-2xl md:text-3xl font-bold text-halloween-orange mb-4">
-                  {video.title}
-                </h2>
-
-                {/* Video Player */}
-                <div className="relative w-full mb-4" style={{ paddingBottom: '56.25%' }}>
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full rounded-xl"
-                    src={`https://www.youtube.com/embed/${video.id}`}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-
-                {/* Video Description */}
-                <p className="text-halloween-light text-lg leading-relaxed">
-                  {video.description}
-                </p>
-              </div>
+              <VideoItem key={idx} video={video} />
             ))}
           </div>
         </div>
@@ -119,7 +145,7 @@ function Videos() {
             
             <button
               onClick={handlePlayClick}
-              className="bg-halloween-orange hover:bg-halloween-light text-white text-2xl font-bold px-12 py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl mb-4"
+              className="bg-halloween-orange hover:bg-halloween-light text-halloween-dark text-2xl font-bold px-12 py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl mb-4"
             >
               🎮 PLAY NOW - FREE
             </button>

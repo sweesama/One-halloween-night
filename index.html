@@ -1,14 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LX3WLW6PK6"></script>
+    <!-- Google tag (gtag.js) - Deferred for performance -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-LX3WLW6PK6');
+      
+      // Load script after interaction to reduce Total Blocking Time
+      ['mousemove', 'scroll', 'keydown', 'click'].forEach(function(evt) {
+        window.addEventListener(evt, function loadGtag() {
+          if (window.gtagLoaded) return;
+          window.gtagLoaded = true;
+          var script = document.createElement('script');
+          script.src = "https://www.googletagmanager.com/gtag/js?id=G-LX3WLW6PK6";
+          script.async = true;
+          document.head.appendChild(script);
+        }, { once: true });
+      });
     </script>
     
     <meta charset="UTF-8" />
@@ -21,16 +31,16 @@
     <meta name="theme-color" content="#FF6B35" />
     
     <!-- SEO Meta Tags -->
-    <title>One Halloween Night Game - Play FREE Horror Game (4.7★ Rating)</title>
-    <meta name="description" content="Download One Halloween Night FREE (668MB) - Story-driven horror game with 4.7/5★ rating (239+ reviews). Direct download for Windows/Mac/Linux or play on itch.io. Multiple endings, 20-40min gameplay!" />
-    <meta name="keywords" content="one halloween night, one halloween night game, one halloween night horror game, one halloween night download, download horror game free, play horror game free, halloween game download, indie horror game, story-driven horror, free horror game download, direct download horror game, itch.io horror game, halloween night game, spooky game free, windows horror game download, mac horror game download" />
+    <title>One Halloween Night - FREE Horror Game (4.7★)</title>
+    <meta name="description" content="Download One Halloween Night FREE! Story-driven indie horror game with 4.7★ rating. Play in browser or download for PC. Multiple endings, spooky atmosphere!" />
+    <meta name="keywords" content="one halloween night, free horror game, indie horror, story-driven horror, halloween game download" />
     <meta name="author" content="Ollie Noseworthy" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://onehalloweennight.net/" />
+    <link rel="canonical" href="https://www.onehalloweennight.net/" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://onehalloweennight.net/" />
+    <meta property="og:url" content="https://www.onehalloweennight.net/" />
     <meta property="og:title" content="One Halloween Night Game - FREE Horror Game (4.7★)" />
     <meta property="og:description" content="Play One Halloween Night - Story-driven horror game with 239+ reviews. Multiple endings, 20-40min gameplay. FREE on itch.io!" />
     <meta property="og:image" content="/og-image.svg" />
@@ -41,7 +51,7 @@
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://onehalloweennight.net/" />
+    <meta property="twitter:url" content="https://www.onehalloweennight.net/" />
     <meta property="twitter:title" content="One Halloween Night Game - FREE Horror Game (4.7★)" />
     <meta property="twitter:description" content="Play One Halloween Night - Story-driven horror game with 239+ reviews. Multiple endings! FREE on itch.io" />
     <meta property="twitter:image" content="/og-image.svg" />
@@ -76,7 +86,7 @@
         "ratingCount": "250",
         "bestRating": "5"
       },
-      "url": "https://onehalloweennight.net/",
+      "url": "https://www.onehalloweennight.net/",
       "sameAs": "https://ollienoseworthy.itch.io/one-halloween-night"
     }
     </script>
@@ -84,7 +94,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;600;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    </noscript>
   </head>
   <body>
     <div id="root"></div>
