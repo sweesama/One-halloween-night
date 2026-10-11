@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -10,7 +10,7 @@ import FAQ from './pages/FAQ'
 
 function App() {
   return (
-    <Router>
+    <>
       <div className="min-h-screen bg-gradient-to-b from-halloween-dark via-halloween-purple to-halloween-dark">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_, i) => (
@@ -42,7 +42,7 @@ function App() {
 
         <Footer />
       </div>
-    </Router>
+    </>
   )
 }
 
