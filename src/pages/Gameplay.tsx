@@ -1,58 +1,55 @@
+import { PageShell, Section, In, ItchButton } from '../components/ui'
+
 function Gameplay() {
-  const handlePlayClick = () => {
-    window.open('https://ollienoseworthy.itch.io/one-halloween-night', '_blank')
-  }
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-halloween-dark via-halloween-purple to-halloween-dark">
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        <h1 className="halloween-title text-5xl md:text-7xl text-halloween-orange text-center mb-8">
-          Gameplay
-        </h1>
+    <PageShell
+      path="/gameplay"
+      h1="How to Play One Halloween Night"
+      intro={<p><strong>One Halloween Night</strong> is a short first-person horror game. You walk around a house, talk to people and pick things up. There is no combat and no inventory. A run takes about 25 minutes, and one choice at the end decides between two endings.</p>}
+    >
+      <Section id="controls" title="Controls">
+        <table>
+          <thead><tr><th>Key</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>W, A, S, D</td><td>Move</td></tr>
+            <tr><td>Mouse</td><td>Look around</td></tr>
+            <tr><td>Left mouse button</td><td>Interact, continue dialogue</td></tr>
+            <tr><td>Right mouse button</td><td>Throw or drop the object you are holding</td></tr>
+          </tbody>
+        </table>
+        <p>These are the controls listed by the developer, and they are also shown in-game. There is no sprint button and no flashlight.</p>
+      </Section>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-halloween-dark bg-opacity-60 backdrop-blur-sm p-8 rounded-xl border-2 border-halloween-orange mb-8">
-            <h2 className="text-3xl font-bold text-halloween-orange mb-6">How to Play</h2>
-            <div className="space-y-4 text-halloween-light text-lg">
-              <p>🎮 <strong>Controls:</strong> Simple point-and-click interface. Navigate through the story using your mouse or keyboard.</p>
-              <p>🕐 <strong>Duration:</strong> Each playthrough takes 20-40 minutes, perfect for a spooky evening session.</p>
-              <p>🔀 <strong>Choices Matter:</strong> Your decisions shape the story. Choose wisely as each choice leads to different outcomes.</p>
-              <p>👻 <strong>Horror Level:</strong> Atmospheric horror with psychological tension. Not overly reliant on jump scares.</p>
-            </div>
-          </div>
+      <Section id="how-it-works" title="How the game works">
+        <ul>
+          <li><strong>The story moves on through chores.</strong> Fill the candy bowl, answer the door, clean the yard, eat, go to bed. Each finished task triggers the next part of the night. The <In to="/walkthrough">walkthrough</In> lists them in order.</li>
+          <li><strong>Talking matters.</strong> Most of the story comes from what the trick-or-treaters and your mom (on the house phone) tell you.</li>
+          <li><strong>Physical objects.</strong> You carry things by hand: candy, a garbage bag, food. Right-click to throw. Throwing candy to the trick-or-treaters works.</li>
+          <li><strong>One real choice.</strong> Near the end you decide to escape the house or hide. That decides the ending. See <In to="/endings">both endings explained</In>.</li>
+          <li><strong>Checkpoint.</strong> If you are caught, you restart at the glass of water just before the choice, not at the very beginning.</li>
+        </ul>
+      </Section>
 
-          <div className="bg-halloween-dark bg-opacity-60 backdrop-blur-sm p-8 rounded-xl border-2 border-halloween-orange mb-8">
-            <h2 className="text-3xl font-bold text-halloween-orange mb-6">Gameplay Features</h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              {[
-                '🏚️ Explore haunted environments',
-                '🎯 Make meaningful story choices',
-                '👁️ Discover hidden secrets',
-                '🔊 Immersive sound design',
-                '📖 Rich narrative storytelling',
-                '⏱️ Multiple endings to discover',
-                '🎨 Atmospheric visuals',
-                '🎃 Perfect Halloween experience'
-              ].map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-3 text-halloween-light text-lg">
-                  <span className="text-2xl">✓</span>
-                  <span>{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+      <Section id="length" title="How long is it?">
+        <p>The developer says a full playthrough takes about 25 minutes. Recorded playthroughs typically run 25 to 40 minutes, depending on how much players explore and whether they go back for the second ending.</p>
+      </Section>
 
-          <div className="text-center">
-            <button
-              onClick={handlePlayClick}
-              className="bg-halloween-orange hover:bg-halloween-light text-white text-2xl font-bold px-12 py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl"
-            >
-              🎮 PLAY NOW
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+      <Section id="scary" title="How scary is it?">
+        <p>It's a slow burn. The first two-thirds are mostly a cosy, slightly odd Halloween evening with funny trick-or-treaters. The tension builds after midnight and peaks with an intruder in the house. Players mention a few jumpscares rather than constant ones. The developer describes it as a <em>realistic home-invasion horror experience</em> and the itch.io tags include Psychological Horror and Creepy.</p>
+      </Section>
+
+      <Section id="tips" title="Beginner tips">
+        <ul>
+          <li>Play at night with headphones. The developer warns that the audio is quiet, so turn up your system and in-game volume.</li>
+          <li>Raise your screen brightness, because the house is dark.</li>
+          <li>Learn the house layout while handing out candy. You will need it later in the dark.</li>
+          <li>To see both endings with the least replaying, choose <strong>Hide</strong> first.</li>
+          <li>Found a bug? The developer asks for bug reports in the itch.io comments.</li>
+        </ul>
+        <p>Haven't installed it yet? See the <In to="/download">download and install guide</In>.</p>
+        <div className="text-center pt-2"><ItchButton /></div>
+      </Section>
+    </PageShell>
   )
 }
 

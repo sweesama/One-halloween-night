@@ -7,13 +7,15 @@ function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Quick Links */}
           <div>
-            <h3 className="text-halloween-orange font-bold text-xl mb-4">Quick Links</h3>
+            <h3 className="text-halloween-orange font-bold text-xl mb-4">Guides</h3>
             <div className="flex flex-col gap-2">
-              <Link to="/" className="text-halloween-light hover:text-halloween-orange transition-colors">Home</Link>
-              <Link to="/gameplay" className="text-halloween-light hover:text-halloween-orange transition-colors">Gameplay</Link>
-              <Link to="/endings" className="text-halloween-light hover:text-halloween-orange transition-colors">Endings</Link>
-              <Link to="/reviews" className="text-halloween-light hover:text-halloween-orange transition-colors">Reviews</Link>
-              <Link to="/faq" className="text-halloween-light hover:text-halloween-orange transition-colors">FAQ</Link>
+              {[
+                ['/walkthrough', 'Walkthrough'], ['/endings', 'Endings explained'], ['/download', 'Download & install'],
+                ['/gameplay', 'How to play'], ['/games-like-one-halloween-night', 'Games like One Halloween Night'],
+                ['/videos', 'Videos'], ['/reviews', 'Review'], ['/faq', 'FAQ'],
+              ].map(([to, label]) => (
+                <Link key={to} to={to} className="text-halloween-light hover:text-halloween-orange transition-colors">{label}</Link>
+              ))}
             </div>
           </div>
 
@@ -35,15 +37,15 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="text-halloween-light hover:text-halloween-orange transition-colors"
               >
-                Read Reviews →
+                Ratings & comments →
               </a>
               <a 
-                href="https://ollienoseworthy.itch.io/one-halloween-night"
+                href="https://ollienoseworthy.itch.io/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-halloween-light hover:text-halloween-orange transition-colors"
               >
-                Developer Page →
+                Developer page →
               </a>
             </div>
           </div>
@@ -52,20 +54,20 @@ function Footer() {
           <div>
             <h3 className="text-halloween-orange font-bold text-xl mb-4">About</h3>
             <p className="text-halloween-light mb-4">
-              One Halloween Night is a spooky story-driven indie horror game created by Ollie Noseworthy.
+              One Halloween Night is a free home-invasion horror game for Windows by the indie developer ollienoseworthy.
             </p>
             <p className="text-halloween-light text-sm">
-              100% Free • No Ads • Play Now on itch.io
+              Free • Windows • Download on itch.io
             </p>
           </div>
         </div>
 
         <div className="border-t border-halloween-orange pt-8 text-center text-halloween-light">
           <p className="mb-2">
-            © 2025 One Halloween Night • All Rights Reserved
+            © 2025–2026 onehalloweennight.net
           </p>
           <p className="text-sm opacity-60">
-            This is a fan site. Game created by Ollie Noseworthy. Not affiliated with itch.io.
+            This is an unofficial fan site. The game is created by ollienoseworthy. Not affiliated with the developer or itch.io.
           </p>
         </div>
       </div>

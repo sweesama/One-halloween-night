@@ -1,104 +1,56 @@
-function Reviews() {
-  const handlePlayClick = () => {
-    window.open('https://ollienoseworthy.itch.io/one-halloween-night', '_blank')
-  }
+import { PageShell, Section, In, Ext, ItchButton } from '../components/ui'
+import { ITCH_URL, ITCH_RATING, FACTS_CHECKED } from '../routes'
 
-  const reviews = [
-    {
-      text: "Loved the game its the perfect game for halloween night, havent ever been that scared of a old man before",
-      author: "Bibbly",
-      stars: 5,
-      date: "Oct 2024"
-    },
-    {
-      text: "Nicely made horror game. I had a lot of fun passing out candy and experiencing one halloween night. The ending was creepy and unexpected",
-      author: "BizarreSpartan",
-      stars: 5,
-      date: "Oct 2024"
-    },
-    {
-      text: "This was a really fun game to get into the halloween spirit! The realism and atmosphere were excellent.",
-      author: "Zoozlebadoozle",
-      stars: 5,
-      date: "Oct 2024"
-    },
-    {
-      text: "The graphics are top notch and the atmosphere is incredibly immersive. A must-play for horror fans!",
-      author: "itch.io player",
-      stars: 5,
-      date: "Nov 2024"
-    },
-    {
-      text: "Short but sweet! Perfect length for a spooky evening. The choices you make really impact the story.",
-      author: "itch.io player",
-      stars: 5,
-      date: "Oct 2024"
-    },
-    {
-      text: "Really enjoyed this! The ending surprised me. Definitely worth playing through multiple times for different outcomes.",
-      author: "itch.io player",
-      stars: 4,
-      date: "Oct 2024"
-    }
-  ]
+// Quotes are copied verbatim from public comments on the official itch.io page.
+const PRAISE = [
+  { text: 'Loved the game its the perfect game for halloween night, havent ever been that scared of a old man before', author: 'Bibbly' },
+  { text: 'Nicely made horror game. I had a lot of fun passing out candy and experiencing one halloween night. The ending was creepy and unexpected', author: 'BizarreSpartan' },
+  { text: 'I liked the game. Of all similar games, this one is the most atmospheric. The plot is banal, but I still give it a big thumbs up and wish you success', author: 'govnoezhkkka' },
+  { text: 'This game was so fun, I really enjoyed it 😊 I liked the hide ending better.', author: 'BabidollRose' },
+]
+const CRITICISM = [
+  { text: 'Having to get a drink everytime you get caught is very annoying. The checkpoint should be somewhere else.', author: 'Louki-Dev' },
+  { text: 'I did wish there were light switches or a flash light as it was dark and difficult to see, especially when hiding', author: 'Hazzaween' },
+  { text: 'I liked it, but it felt a lot like Home Alone from the Fears to Fathom series', author: 'Umbra Studio' },
+]
 
+function Quote({ q }: { q: { text: string; author: string } }) {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-halloween-dark via-halloween-purple to-halloween-dark">
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        <h1 className="halloween-title text-5xl md:text-7xl text-halloween-orange text-center mb-8">
-          Player Reviews
-        </h1>
+    <blockquote className="bg-halloween-purple bg-opacity-30 p-4 rounded-lg border border-halloween-orange">
+      <p className="italic">"{q.text}"</p>
+      <footer className="text-halloween-orange font-semibold mt-2">— {q.author}, itch.io comment</footer>
+    </blockquote>
+  )
+}
 
-        <div className="max-w-4xl mx-auto mb-12">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <span className="text-6xl">⭐⭐⭐⭐⭐</span>
-            </div>
-            <div className="text-halloween-light text-2xl mb-2">
-              <span className="font-bold text-4xl text-halloween-orange">4.7</span> out of 5
-            </div>
-            <div className="text-halloween-light text-xl">
-              Based on <span className="font-bold text-halloween-orange">239+</span> reviews on itch.io
-            </div>
-          </div>
+function Reviews() {
+  return (
+    <PageShell
+      path="/reviews"
+      h1="One Halloween Night Review: Is It Worth Playing?"
+      intro={<p>On itch.io, One Halloween Night is rated <strong>{ITCH_RATING.value} out of 5 from {ITCH_RATING.count} ratings</strong> (checked {FACTS_CHECKED}). In short: it's free, short and very atmospheric. Players love the Halloween night setting and the creepy old man. The most common complaints are the slow start, the dark house and replaying the water scene after getting caught.</p>}
+    >
+      <Section id="verdict" title="Verdict">
+        <ul>
+          <li><strong>Play it if</strong> you like short, realistic, slow-burn horror in the style of Fears to Fathom, and want something for Halloween night itself.</li>
+          <li><strong>Skip it if</strong> you want constant scares, combat or a long game. Most of the 25 minutes is calm build-up.</li>
+          <li><strong>Cost:</strong> free, so the only cost is about half an hour.</li>
+        </ul>
+      </Section>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {reviews.map((review, idx) => (
-              <div key={idx} className="bg-halloween-purple bg-opacity-30 backdrop-blur-sm p-6 rounded-lg border border-halloween-orange">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-halloween-orange text-xl">
-                    {'⭐'.repeat(review.stars)}
-                  </div>
-                  <div className="text-halloween-light text-sm">{review.date}</div>
-                </div>
-                <p className="text-halloween-light mb-4 italic text-lg">"{review.text}"</p>
-                <p className="text-halloween-orange font-semibold">— {review.author}</p>
-              </div>
-            ))}
-          </div>
+      <Section id="praise" title="What players like">
+        <div className="grid gap-4">{PRAISE.map((q) => <Quote key={q.author} q={q} />)}</div>
+      </Section>
 
-          <div className="text-center mb-12">
-            <a 
-              href="https://ollienoseworthy.itch.io/one-halloween-night"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-halloween-orange hover:text-halloween-light underline text-xl"
-            >
-              Read all 239+ reviews on itch.io →
-            </a>
-          </div>
+      <Section id="criticism" title="What players criticize">
+        <div className="grid gap-4">{CRITICISM.map((q) => <Quote key={q.author} q={q} />)}</div>
+      </Section>
 
-          <div className="text-center">
-            <button
-              onClick={handlePlayClick}
-              className="bg-halloween-orange hover:bg-halloween-light text-white text-2xl font-bold px-12 py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl"
-            >
-              🎮 JOIN THE PLAYERS
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+      <Section title="Read more or rate it yourself">
+        <p>The rating and all comments live on the <Ext href={ITCH_URL}>official itch.io page</Ext>, where you can also leave your own. Curious how it ends? See the <In to="/endings">endings explained</In>.</p>
+        <div className="text-center pt-2"><ItchButton /></div>
+      </Section>
+    </PageShell>
   )
 }
 
