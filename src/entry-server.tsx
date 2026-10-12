@@ -12,3 +12,5 @@ export function render(url: string): string {
     </React.StrictMode>,
   )
 }
+
+export { ROUTES, SITE, ITCH_URL } from './routes'

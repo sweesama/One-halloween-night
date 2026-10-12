@@ -6,10 +6,11 @@ function Navigation() {
 
   const navLinks = [
     { to: '/', label: 'Home' },
-    { to: '/gameplay', label: 'Gameplay' },
+    { to: '/walkthrough', label: 'Walkthrough' },
     { to: '/endings', label: 'Endings' },
+    { to: '/download', label: 'Download' },
+    { to: '/gameplay', label: 'How to Play' },
     { to: '/videos', label: 'Videos' },
-    { to: '/reviews', label: 'Reviews' },
     { to: '/faq', label: 'FAQ' },
   ]
 
@@ -23,7 +24,7 @@ function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-5">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -39,14 +40,14 @@ function Navigation() {
               rel="noopener noreferrer"
               className="bg-halloween-orange hover:bg-halloween-light text-white font-bold px-6 py-2 rounded-full transition-all duration-300"
             >
-              PLAY NOW
+              DOWNLOAD FREE
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-halloween-orange text-3xl"
+            aria-label="Menu" className="lg:hidden text-halloween-orange text-3xl"
           >
             {isOpen ? '✕' : '☰'}
           </button>
@@ -54,7 +55,7 @@ function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4">
+          <div className="lg:hidden pb-4">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link

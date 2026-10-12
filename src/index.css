@@ -32,3 +32,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #ffa559;
 }
+
+/* Readable long-form guide content */
+.prose-ohn ul { list-style: disc; padding-left: 1.5rem; }
+.prose-ohn ol { list-style: decimal; padding-left: 1.5rem; }
+.prose-ohn li { margin: 0.35rem 0; }
+.prose-ohn h3 { color: #FF6B35; font-weight: 700; font-size: 1.25rem; margin-top: 1.25rem; }
+.prose-ohn table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+.prose-ohn th, .prose-ohn td { border: 1px solid rgba(255,107,53,0.5); padding: 0.5rem; text-align: left; vertical-align: top; }
+.prose-ohn th { color: #FF6B35; }
