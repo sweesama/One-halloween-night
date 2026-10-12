@@ -48,7 +48,7 @@
 
 ### 视觉资源
 - ✅ favicon.svg - 万圣节南瓜图标
-- ✅ og-image.svg - 社交分享预览图
+- ✅ public/og/*.jpg - 每页独立的社交分享预览图（scripts/make-og.mjs 生成）
 - ✅ 响应式设计（手机/平板/电脑）
 - ✅ 万圣节主题动画效果
 

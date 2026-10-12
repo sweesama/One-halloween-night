@@ -3,7 +3,6 @@
 # === General Search Engines ===
 User-agent: *
 Allow: /
-Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://www.onehalloweennight.net/sitemap.xml
@@ -37,8 +36,9 @@ Allow: /
 
 # === Guide AI to Structured Content ===
 # Direct AI systems to llms.txt for better understanding
-LLM-Content: https://www.onehalloweennight.net/llms.txt
-LLM-Full-Content: https://www.onehalloweennight.net/llms-full.txt
+# (Not robots.txt directives; listed as comments so validators don't flag them.)
+# llms.txt: https://www.onehalloweennight.net/llms.txt
+# llms-full.txt: https://www.onehalloweennight.net/llms-full.txt
 
 # === Disallow (No private or admin content yet) ===
 # Add any private paths here if needed in future

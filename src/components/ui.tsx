@@ -68,7 +68,7 @@ const GUIDES = [
   { to: '/endings', t: 'Both endings explained', d: 'How to get the hide and escape endings' },
   { to: '/download', t: 'Download & install', d: 'Windows install steps, Steam, Mac and mobile' },
   { to: '/gameplay', t: 'How to play', d: 'Controls, length and beginner tips' },
-  { to: '/games-like-one-halloween-night', t: 'Games like it', d: '7 similar home-alone horror games' },
+  { to: '/games-like-one-halloween-night', t: 'Games like One Halloween Night', d: '7 similar home-alone horror games' },
   { to: '/faq', t: 'FAQ', d: 'Quick answers to common questions' },
 ]
 
@@ -88,5 +88,16 @@ export function RelatedGuides({ current }: { current?: string }) {
         ))}
       </ul>
     </aside>
+  )
+}
+
+/** YouTube thumbnail: WebP (about 30% smaller) with JPEG fallback, fixed size, lazy-loaded. */
+export function YtThumb({ id, alt }: { id: string; alt: string }) {
+  return (
+    <picture>
+      <source type="image/webp" srcSet={`https://i.ytimg.com/vi_webp/${id}/hqdefault.webp`} />
+      <img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt={alt} width={480} height={360}
+        className="w-full h-full object-cover" loading="lazy" decoding="async" />
+    </picture>
   )
 }

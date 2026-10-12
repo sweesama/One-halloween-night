@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { PageShell, Section, In, ItchButton } from '../components/ui'
+import { PageShell, Section, In, ItchButton, YtThumb } from '../components/ui'
 
 interface Video { id: string; title: string; channel: string; category: string; description: string; chapters?: { t: string; s: number }[] }
 
@@ -43,7 +43,7 @@ function VideoItem({ video }: { video: Video }) {
       <div className="relative w-full rounded-xl overflow-hidden bg-black group cursor-pointer" style={{ aspectRatio: '16/9' }} onClick={() => setStart(start ?? 0)}>
         {start === null ? (
           <>
-            <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={`${video.title} – One Halloween Night video by ${video.channel}`} className="w-full h-full object-cover" loading="lazy" />
+            <YtThumb id={video.id} alt={`${video.title} – One Halloween Night video by ${video.channel}`} />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
               <div className="w-16 h-16 bg-halloween-orange rounded-full flex items-center justify-center">
                 <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[16px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>

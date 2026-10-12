@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ITCH_URL, MIRROR_URL, ITCH_RATING, FACTS_CHECKED } from '../routes'
-import { RelatedGuides, In, Ext } from '../components/ui'
+import { RelatedGuides, In, Ext, YtThumb } from '../components/ui'
 
 function Home() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
@@ -61,7 +61,7 @@ function Home() {
           <div className="relative w-full rounded-2xl shadow-2xl border-4 border-halloween-orange overflow-hidden bg-black cursor-pointer" style={{ aspectRatio: '16/9' }} onClick={() => setIsVideoPlaying(true)}>
             {!isVideoPlaying ? (
               <>
-                <img src="https://img.youtube.com/vi/Cwfu69Y_EYQ/hqdefault.jpg" alt="One Halloween Night gameplay by Thinknoodles" className="w-full h-full object-cover" loading="lazy" />
+                <YtThumb id="Cwfu69Y_EYQ" alt="One Halloween Night gameplay video by Thinknoodles: handing out candy on Halloween night" />
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
                   <div className="w-20 h-20 bg-halloween-orange rounded-full flex items-center justify-center">
                     <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[20px] border-l-white border-b-[10px] border-b-transparent ml-2"></div>
@@ -81,7 +81,7 @@ function Home() {
       <section className="relative z-10 container mx-auto px-4 py-12 max-w-4xl text-halloween-light text-lg leading-relaxed space-y-6">
         <h2 className="halloween-title text-3xl md:text-4xl text-halloween-orange text-center">What is One Halloween Night?</h2>
         <p>
-          <strong>One Halloween Night</strong> is a free first-person horror game made in Unity by the solo developer <Ext href="https://ollienoseworthy.itch.io/">ollienoseworthy</Ext> and released on itch.io in October 2025. The developer calls it a <em>realistic home-invasion horror experience</em>. You play a teenage boy whose parents have to leave unexpectedly for the night, so you're left alone to look after the house and hand out candy. What should be a simple, relaxing night slowly turns into a nightmare.
+          <strong>One Halloween Night</strong> is a free first-person Halloween night horror game made in Unity by the solo developer <Ext href="https://ollienoseworthy.itch.io/">ollienoseworthy</Ext> and released on itch.io in October 2025. The developer calls it a <em>realistic home-invasion horror experience</em>. You play a teenage boy whose parents have to leave unexpectedly for the night, so you're left alone to look after the house and hand out candy. What should be a simple, relaxing night slowly turns into a nightmare.
         </p>
         <p>
           Most of the game is the build-up: answering the door to a parade of odd trick-or-treaters, checking out a stranger in your backyard, cleaning up wrappers, eating leftover pizza and trying to sleep. The VHS camera effect, 3D sound and a deliberately quiet soundtrack make every knock count. One choice near the end decides which of the <In to="/endings">two endings</In> you get.
@@ -104,6 +104,23 @@ function Home() {
           </table>
           <p className="text-sm opacity-80 mt-2">Facts and rating from the <Ext href={ITCH_URL}>official itch.io page</Ext>, checked {FACTS_CHECKED}.</p>
         </div>
+      </section>
+
+      {/* Why play it on Halloween night */}
+      <section className="relative z-10 container mx-auto px-4 py-12 max-w-4xl text-halloween-light text-lg leading-relaxed">
+        <h2 className="halloween-title text-3xl md:text-4xl text-halloween-orange text-center mb-6">A short horror game for Halloween night</h2>
+        <p className="mb-4">
+          Looking for one game to play on Halloween night itself? One Halloween Night is built around that exact evening, and it fits into one sitting:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4">
+          <li><strong>Short:</strong> about 25 minutes from the first doorbell to the ending, so it works between trick-or-treaters or before a movie.</li>
+          <li><strong>Free:</strong> no price and no in-game purchases. You only need a Windows PC (<In to="/download">install steps</In>).</li>
+          <li><strong>Slow-burn:</strong> most of the night is candy, chores and odd visitors, with the scares saved for the end. Good to watch with friends or stream.</li>
+          <li><strong>Two endings:</strong> one choice near the end decides how the night goes. Our <In to="/walkthrough">step-by-step walkthrough</In> covers both routes.</li>
+        </ul>
+        <p>
+          Already finished it? See our list of <In to="/games-like-one-halloween-night">games like One Halloween Night</In> for more home-alone and Halloween horror games.
+        </p>
       </section>
 
       {/* Player quotes */}
