@@ -20,24 +20,47 @@ const ogImage = (p) => {
 function jsonLd(route) {
   const blocks = []
   if (route.path === '/') {
+    // This page is a guide. The game entity points at the itch.io release, not this URL.
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${urlFor('/')}#webpage`,
+      url: urlFor('/'),
+      name: route.title,
+      description: route.description,
+      inLanguage: 'en',
+      isPartOf: { '@id': `${urlFor('/')}#website` },
+      about: { '@id': `${ITCH_URL}#game` },
+      mainEntity: { '@id': `${ITCH_URL}#game` },
+      dateModified: today,
+    })
     blocks.push({
       '@context': 'https://schema.org',
       '@type': 'VideoGame',
+      '@id': `${ITCH_URL}#game`,
       name: 'One Halloween Night',
-      description: 'A free, realistic first-person home-invasion horror game made in Unity. A teenage boy left home alone on Halloween night hands out candy to trick-or-treaters until the night turns into a nightmare. About 25 minutes long with two endings.',
-      url: urlFor('/'),
-      sameAs: ITCH_URL,
+      description: 'A free first-person home-invasion horror game about one Halloween spent home alone. Made in Unity by ollienoseworthy and released on itch.io in October 2025. About 25 minutes long, with two endings. Windows only.',
+      url: ITCH_URL,
       image: ogImage('/'),
+      datePublished: '2025-10',
+      softwareVersion: '1.2',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'ollienoseworthy', url: 'https://ollienoseworthy.itch.io/' },
-      genre: ['Horror', 'Psychological Horror'],
+      genre: ['Horror', 'Psychological Horror', 'Simulation'],
       gamePlatform: 'Windows',
       operatingSystem: 'Windows',
       applicationCategory: 'Game',
       playMode: 'SinglePlayer',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: ITCH_URL },
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: ITCH_URL, availability: 'https://schema.org/InStock' },
     })
-    blocks.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'One Halloween Night (fan guide)', url: urlFor('/') })
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${urlFor('/')}#website`,
+      name: 'One Halloween Night',
+      url: urlFor('/'),
+      description: 'Unofficial fan guide to One Halloween Night, a free home-invasion horror game for Windows.',
+    })
   } else {
     blocks.push({
       '@context': 'https://schema.org',
