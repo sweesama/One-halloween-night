@@ -10,9 +10,9 @@ function Home() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative z-10 container mx-auto px-4 py-16 md:py-20 text-center">
-        <h1 className="halloween-title text-5xl md:text-7xl text-halloween-orange mb-6">One Halloween Night Game</h1>
+        <h1 className="halloween-title text-5xl md:text-7xl text-halloween-orange mb-6">One Halloween Night</h1>
         <p className="text-xl md:text-2xl text-halloween-light mb-8 max-w-3xl mx-auto">
-          A free, 25-minute home-invasion horror game for Windows. You're 14, home alone on Halloween night with a bowl of candy, and someone is coming for more than candy.
+          A free, 25-minute home-invasion horror game for Windows. You're 14 and home alone for one Halloween, with a bowl of candy and someone coming for more than candy.
         </p>
 
         <div className="flex flex-col md:flex-row justify-center gap-4 mb-10 text-halloween-light text-lg">
@@ -57,7 +57,7 @@ function Home() {
       {/* Video */}
       <section className="relative z-10 container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          <h2 className="halloween-title text-3xl md:text-4xl text-halloween-orange text-center mb-8">🎬 Watch the game in action</h2>
+          <h2 className="halloween-title text-3xl md:text-4xl text-halloween-orange text-center mb-8">🎬 Watch One Halloween Night</h2>
           <div className="relative w-full rounded-2xl shadow-2xl border-4 border-halloween-orange overflow-hidden bg-black cursor-pointer" style={{ aspectRatio: '16/9' }} onClick={() => setIsVideoPlaying(true)}>
             {!isVideoPlaying ? (
               <>
@@ -81,36 +81,54 @@ function Home() {
       <section className="relative z-10 container mx-auto px-4 py-12 max-w-4xl text-halloween-light text-lg leading-relaxed space-y-6">
         <h2 className="halloween-title text-3xl md:text-4xl text-halloween-orange text-center">What is One Halloween Night?</h2>
         <p>
-          <strong>One Halloween Night</strong> is a free first-person Halloween night horror game made in Unity by the solo developer <Ext href="https://ollienoseworthy.itch.io/">ollienoseworthy</Ext> and released on itch.io in October 2025. The developer calls it a <em>realistic home-invasion horror experience</em>. You play a teenage boy whose parents have to leave unexpectedly for the night, so you're left alone to look after the house and hand out candy. What should be a simple, relaxing night slowly turns into a nightmare.
+          <strong>One Halloween Night</strong> is a free first-person horror game about one Halloween spent home alone. Solo developer <Ext href="https://ollienoseworthy.itch.io/">ollienoseworthy</Ext> made it in Unity and released it on itch.io in October 2025. The developer calls it a <em>realistic home-invasion horror experience</em>. You play a teenage boy whose parents have to leave unexpectedly, so you look after the house and hand out candy. What should be a simple night turns into a nightmare.
         </p>
         <p>
-          Most of the game is the build-up: answering the door to a parade of odd trick-or-treaters, checking out a stranger in your backyard, cleaning up wrappers, eating leftover pizza and trying to sleep. The VHS camera effect, 3D sound and a deliberately quiet soundtrack make every knock count. One choice near the end decides which of the <In to="/endings">two endings</In> you get.
+          Most of that night is the build-up: odd trick-or-treaters, a stranger in the backyard, chores, leftover pizza, then bed. A VHS camera effect and 3D sound carry it, and the developer warns that the audio is quiet, so turn your volume up and wear headphones. One choice near the end decides which of the <In to="/endings">two endings</In> you get.
+        </p>
+        <h3 className="text-2xl font-bold text-halloween-orange mt-2">How one Halloween plays out</h3>
+        <p>
+          The game follows a single evening, and it moves on when you finish the current chore:
+        </p>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Answer the house phone. Your mom leaves you two jobs: clean up the candy wrappers, and smack the basement water pump if it starts.</li>
+          <li>Carry the candy down from upstairs and throw it into the bowl by the front door.</li>
+          <li>From about 7:40 PM, open the door and give each trick-or-treater a piece of candy.</li>
+          <li>Check the backyard, where an old man has set up a candy stand. He leaves. Call your mom and tell her.</li>
+          <li>Bag the wrappers, eat the leftover pizza and change for bed. The clock moves to 11:59 PM.</li>
+          <li>After midnight the pump and a late doorbell get you up again. At 1:30 AM you fetch a glass of water, hear footsteps, and choose: escape the house, or hide.</li>
+        </ol>
+        <p>
+          Every visitor, in order, is in the <In to="/walkthrough">walkthrough</In>. What hide and escape each lead to is in the <In to="/endings">endings guide</In>.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-base">
             <tbody>
               {[
                 ['Price', 'Free'],
+                ['Developer', 'ollienoseworthy'],
+                ['Released', 'October 2025'],
                 ['Platform', 'Windows PC (itch.io)'],
                 ['Length', 'About 25 minutes'],
                 ['Endings', '2 (hide or escape)'],
                 ['Controls', 'WASD + mouse, left click interact, right click throw'],
-                ['Download size', '669 MB zip'],
+                ['Build', 'One Halloween Night 1.2.zip (669 MB)'],
                 ['itch.io rating', `${ITCH_RATING.value}/5 from ${ITCH_RATING.count} ratings`],
               ].map(([k, v]) => (
                 <tr key={k}><th className="border border-halloween-orange p-2 text-left text-halloween-orange">{k}</th><td className="border border-halloween-orange p-2">{v}</td></tr>
               ))}
             </tbody>
           </table>
-          <p className="text-sm opacity-80 mt-2">Facts and rating from the <Ext href={ITCH_URL}>official itch.io page</Ext>, checked {FACTS_CHECKED}.</p>
+          <p className="text-sm opacity-80 mt-2">Facts and rating from the <Ext href={ITCH_URL}>official itch.io page</Ext>, checked {FACTS_CHECKED}. The 1.2 zip name is the Windows build listed on that page.</p>
+          <p className="text-sm opacity-80 mt-2">One Night on Halloween, the visual novel on Steam, is a different game. One Halloween Night itself is only on itch.io.</p>
         </div>
       </section>
 
       {/* Why play it on Halloween night */}
       <section className="relative z-10 container mx-auto px-4 py-12 max-w-4xl text-halloween-light text-lg leading-relaxed">
-        <h2 className="halloween-title text-3xl md:text-4xl text-halloween-orange text-center mb-6">A short horror game for Halloween night</h2>
+        <h2 className="halloween-title text-3xl md:text-4xl text-halloween-orange text-center mb-6">A short game for one Halloween</h2>
         <p className="mb-4">
-          Looking for one game to play on Halloween night itself? One Halloween Night is built around that exact evening, and it fits into one sitting:
+          Looking for one game to play on Halloween itself? One Halloween Night is built around that evening, and it fits into a single sitting:
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li><strong>Short:</strong> about 25 minutes from the first doorbell to the ending, so it works between trick-or-treaters or before a movie.</li>

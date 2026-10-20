@@ -44,8 +44,8 @@ export const ROUTES: RouteMeta[] = [
   {
     path: '/',
     label: 'Home',
-    title: 'One Halloween Night Game: Free Download, Guide & Endings',
-    description: 'One Halloween Night is a free 25-minute Halloween night horror game for Windows. How to download it, the full walkthrough, both endings and similar games.',
+    title: 'One Halloween Night: Free Download, Guide & Endings',
+    description: 'One Halloween Night is a free 25-minute Windows horror game about one Halloween at home. Download it, plus the walkthrough and both endings.',
     priority: '1.0', changefreq: 'weekly',
   },
   {
