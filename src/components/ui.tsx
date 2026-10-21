@@ -7,7 +7,7 @@ export function Breadcrumbs({ path }: { path: string }) {
   return (
     <nav aria-label="Breadcrumb" className="text-halloween-light text-sm mb-6 opacity-90">
       <ol className="flex flex-wrap gap-2">
-        <li><Link to="/" className="underline hover:text-halloween-orange">Home</Link></li>
+        <li><Link to="/" className="underline hover:text-halloween-orange">One Halloween Night</Link></li>
         <li aria-hidden="true">›</li>
         <li aria-current="page">{meta?.label}</li>
       </ol>
@@ -64,6 +64,7 @@ export function ItchButton({ label = 'Get it free on itch.io' }: { label?: strin
 }
 
 const GUIDES = [
+  { to: '/', t: 'One Halloween Night', d: 'What the free horror game is, plus facts and where to download it' },
   { to: '/walkthrough', t: 'Full walkthrough', d: 'Every step from the candy bowl to the final choice' },
   { to: '/endings', t: 'Both endings explained', d: 'How to get the hide and escape endings' },
   { to: '/download', t: 'Download & install', d: 'Windows install steps, Steam, Mac and mobile' },

@@ -6,7 +6,7 @@ function Endings() {
     <PageShell
       path="/endings"
       h1="One Halloween Night Endings Explained"
-      intro={<p><strong>One Halloween Night has two endings.</strong> Both come from a single choice at about 1:30 AM, when the old man creeps into your bedroom and the game asks: <em>"Escape the house or hide?"</em> Choose <strong>Hide</strong> for the rescue ending, or <strong>Escape the house</strong> for the ending where he catches you.</p>}
+      intro={<p><strong><In to="/">One Halloween Night</In> has two endings.</strong> Both come from a single choice at about 1:30 AM, when the old man creeps into your bedroom and the game asks: <em>"Escape the house or hide?"</em> Choose <strong>Hide</strong> for the rescue ending, or <strong>Escape the house</strong> for the ending where he catches you. The game itself, and how the name differs from the short film One Halloween, is explained in <In to="/#what-is-one-halloween">what One Halloween refers to</In>.</p>}
     >
       <Spoiler />
 

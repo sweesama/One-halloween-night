@@ -72,7 +72,7 @@ function Videos() {
     <PageShell
       path="/videos"
       h1="One Halloween Night Gameplay Videos"
-      intro={<p>Full playthroughs of One Halloween Night from YouTube, including no-commentary runs with timestamps for <strong>both endings</strong>. Prefer reading? The <In to="/walkthrough">written walkthrough</In> and <In to="/endings">endings guide</In> cover the same ground.</p>}
+      intro={<p>Full playthroughs of <In to="/">One Halloween Night</In> from YouTube, including no-commentary runs with timestamps for <strong>both endings</strong>. Prefer reading? The <In to="/walkthrough">written walkthrough</In> and <In to="/endings">endings guide</In> cover the same ground.</p>}
     >
       {VIDEOS.map((v) => <VideoItem key={v.id} video={v} />)}
       <Section title="Play it yourself">

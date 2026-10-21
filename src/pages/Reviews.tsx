@@ -28,7 +28,7 @@ function Reviews() {
     <PageShell
       path="/reviews"
       h1="One Halloween Night Review: Is It Worth Playing?"
-      intro={<p>On itch.io, One Halloween Night is rated <strong>{ITCH_RATING.value} out of 5 from {ITCH_RATING.count} ratings</strong> (checked {FACTS_CHECKED}). In short: it's free, short and very atmospheric. Players love the Halloween night setting and the creepy old man. The most common complaints are the slow start, the dark house and replaying the water scene after getting caught.</p>}
+      intro={<p>On itch.io, <In to="/">One Halloween Night</In> is rated <strong>{ITCH_RATING.value} out of 5 from {ITCH_RATING.count} ratings</strong> (checked {FACTS_CHECKED}). In short: it's free, short and very atmospheric. Players love the Halloween night setting and the creepy old man. The most common complaints are the slow start, the dark house and replaying the water scene after getting caught.</p>}
     >
       <Section id="verdict" title="Verdict">
         <ul>

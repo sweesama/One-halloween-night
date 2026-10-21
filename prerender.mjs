@@ -39,7 +39,7 @@ function jsonLd(route) {
       '@type': 'VideoGame',
       '@id': `${ITCH_URL}#game`,
       name: 'One Halloween Night',
-      description: 'A free first-person home-invasion horror game about one Halloween spent home alone. Made in Unity by ollienoseworthy and released on itch.io in October 2025. About 25 minutes long, with two endings. Windows only.',
+      description: 'A free first-person home-invasion horror game about one Halloween spent home alone. Made in Unity by ollienoseworthy and released on itch.io in October 2025. About 25 minutes long, with two endings. Windows only. Not the short film titled One Halloween.',
       url: ITCH_URL,
       image: ogImage('/'),
       datePublished: '2025-10',
@@ -66,7 +66,7 @@ function jsonLd(route) {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: urlFor('/') },
+        { '@type': 'ListItem', position: 1, name: 'One Halloween Night', item: urlFor('/') },
         { '@type': 'ListItem', position: 2, name: route.label, item: urlFor(route.path) },
       ],
     })

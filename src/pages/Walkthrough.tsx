@@ -94,7 +94,7 @@ function Walkthrough() {
     <PageShell
       path="/walkthrough"
       h1="One Halloween Night Walkthrough"
-      intro={<p>This is a step-by-step walkthrough of <strong>One Halloween Night</strong>, the free home-invasion horror game by ollienoseworthy. A full run takes about 25 minutes. Follow the steps in order: the game moves on when you finish each task, and the last choice decides which of the two endings you get.</p>}
+      intro={<p>This is a step-by-step walkthrough of <In to="/">One Halloween Night</In>, the free home-invasion horror game by ollienoseworthy. A full run takes about 25 minutes. Follow the steps in order: the game moves on when you finish each task, and the last choice decides which of the two endings you get. New to the name? <In to="/#what-is-one-halloween">What One Halloween refers to</In> is on the game page.</p>}
     >
       <Spoiler>this walkthrough covers the whole story. Play it blind first if you can.</Spoiler>
 

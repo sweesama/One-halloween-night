@@ -46,7 +46,7 @@ function SimilarGames() {
     <PageShell
       path="/games-like-one-halloween-night"
       h1="Games Like One Halloween Night"
-      intro={<p>If you finished <strong>One Halloween Night</strong> and want more of the same, home alone at night with a stranger getting a little too close, these seven PC horror games are the best next picks. We start with the closest match, and the first one is free.</p>}
+      intro={<p>If you finished <In to="/">One Halloween Night</In> and want more of the same, home alone at night with a stranger getting a little too close, these seven PC horror games are the best next picks. We start with the closest match, and the first one is free.</p>}
     >
       <Section id="list" title="Quick list">
         <table>
