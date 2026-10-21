@@ -10,6 +10,7 @@ function Footer() {
             <h3 className="text-halloween-orange font-bold text-xl mb-4">Guides</h3>
             <div className="flex flex-col gap-2">
               {[
+                ['/', 'One Halloween Night'],
                 ['/walkthrough', 'Walkthrough'], ['/endings', 'Endings explained'], ['/download', 'Download & install'],
                 ['/gameplay', 'How to play'], ['/games-like-one-halloween-night', 'Games like One Halloween Night'],
                 ['/videos', 'Videos'], ['/reviews', 'Review'], ['/faq', 'FAQ'],

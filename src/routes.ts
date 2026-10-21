@@ -21,6 +21,31 @@ export interface RouteMeta {
   faq?: FaqItem[]
 }
 
+// Homepage FAQ targets the short query "one halloween". Keep these questions off
+// /faq so the two pages do not publish duplicate FAQPage schema.
+export const FAQ_HOME: FaqItem[] = [
+  {
+    q: 'What is One Halloween?',
+    a: 'One Halloween Night is a free first-person horror game for Windows. Solo developer ollienoseworthy made it in Unity and released it on itch.io in October 2025. The developer calls it a realistic home-invasion horror experience: you play a teenage boy left home alone to hand out candy. A full run takes about 25 minutes and has two endings. This site is an unofficial guide to that game.',
+  },
+  {
+    q: 'Is the movie One Halloween the same as One Halloween Night?',
+    a: 'No. One Halloween is a short film directed and co-written by Rebecca Murga. Her site describes it as an HBO short about a Colombian-born veteran spending one Halloween night with his 10-year-old daughter after coming home from the hospital. The Movie Database lists it as One Halloween (2017), about 15 minutes, rated PG. The IMDb page is tt5839838, and search listings title that page as a 2016 short, so the year is listed both ways. It is not a horror game and there is nothing to download.',
+  },
+  {
+    q: 'Is One Halloween Night on Steam?',
+    a: 'No. The only official release is the free Windows build on itch.io. Two Steam games are easy to mix up with it: One Night on Halloween (Cult Shock Games, October 29, 2020) is a visual novel, and Halloween: The Game (IllFonic, September 8, 2026) is the Michael Myers game. Neither is One Halloween Night.',
+  },
+  {
+    q: 'Where do I download One Halloween?',
+    a: 'Download One Halloween Night free from the developer\'s itch.io page. You get a Windows zip: extract it and run the .exe. There is no official Mac, Linux, console, mobile or browser version. Install steps are on this site\'s download page.',
+  },
+  {
+    q: 'Do "one night halloween" and "halloween one night" mean a different game?',
+    a: 'No. Those are other word orders for One Halloween Night, the free Windows horror game. They are not separate releases. One Night on Halloween, with "Night" before "Halloween", is the different Steam visual novel from 2020.',
+  },
+]
+
 export const FAQ_GENERAL: FaqItem[] = [
   { q: 'Is One Halloween Night free?', a: 'Yes. One Halloween Night is a free download on itch.io from its developer, ollienoseworthy. There are no in-game purchases.' },
   { q: 'How long is One Halloween Night?', a: 'The developer says a full playthrough takes about 25 minutes. Seeing both endings takes a little longer, because you replay the final choice.' },
@@ -44,22 +69,23 @@ export const ROUTES: RouteMeta[] = [
   {
     path: '/',
     label: 'Home',
-    title: 'One Halloween Night: Free Download, Guide & Endings',
-    description: 'One Halloween Night is a free 25-minute Windows horror game about one Halloween at home. Download it, plus the walkthrough and both endings.',
+    title: 'One Halloween Night: Free 25-Min Horror Game',
+    description: 'Looking up One Halloween? This is One Halloween Night, a free 25-minute Windows horror game. Download it, with the walkthrough and both endings.',
     priority: '1.0', changefreq: 'weekly',
+    faq: FAQ_HOME,
   },
   {
     path: '/walkthrough',
     label: 'Walkthrough',
-    title: 'One Halloween Night Walkthrough: Full Guide, Step by Step',
-    description: 'Complete One Halloween Night walkthrough: every task from the candy bowl to the 1:30 AM choice, every trick-or-treater, the old man and time-saving tips.',
+    title: 'Step-by-Step Walkthrough of One Halloween Night',
+    description: 'Walkthrough of One Halloween Night: every task from the candy bowl to the 1:30 AM choice, every trick-or-treater, the old man and tips.',
     priority: '0.9', changefreq: 'monthly',
   },
   {
     path: '/endings',
     label: 'Endings',
-    title: 'One Halloween Night Endings Explained: Hide vs Escape',
-    description: 'One Halloween Night has two endings. How to get the hide (rescue) ending and the escape (caught) ending, what the epilogue reveals and how to see both.',
+    title: 'Endings Explained: Hide vs Escape in One Halloween Night',
+    description: 'Hide or escape? How both One Halloween Night endings work, what the epilogue reveals, and how to see them without replaying the whole night.',
     priority: '0.9', changefreq: 'monthly',
     faq: FAQ_ENDINGS,
   },
@@ -87,22 +113,22 @@ export const ROUTES: RouteMeta[] = [
   {
     path: '/videos',
     label: 'Videos',
-    title: 'One Halloween Night Gameplay Videos & Full Playthroughs',
-    description: 'Watch One Halloween Night full playthroughs on YouTube, including no-commentary videos with timestamps for both endings and popular let\'s plays.',
+    title: 'Gameplay Videos and Playthroughs of One Halloween Night',
+    description: 'YouTube playthroughs of One Halloween Night, including no-commentary videos with timestamps for both endings and popular let\'s plays.',
     priority: '0.7', changefreq: 'monthly',
   },
   {
     path: '/reviews',
     label: 'Reviews',
-    title: 'One Halloween Night Review: Is It Worth Playing?',
-    description: 'One Halloween Night is rated 4.2 out of 5 from 118 ratings on itch.io. What players like, what they criticize, and who the game is for.',
+    title: 'Review: Is One Halloween Night Worth Playing?',
+    description: 'Is One Halloween Night worth playing? Rated 4.2/5 from 118 itch.io ratings. What players like, what they criticize, and who it is for.',
     priority: '0.7', changefreq: 'monthly',
   },
   {
     path: '/faq',
     label: 'FAQ',
-    title: 'One Halloween Night FAQ: Free? Steam? Mac? How Many Endings?',
-    description: 'Quick answers about One Halloween Night: price, length, endings, controls, Steam, Mac, mobile and browser availability, and who made it.',
+    title: 'FAQ: Free, Steam, Mac and Endings (One Halloween Night)',
+    description: 'Price, length, endings, controls, Steam, Mac and mobile for the game. What the name One Halloween means is on the homepage.',
     priority: '0.7', changefreq: 'monthly',
     faq: FAQ_GENERAL,
   },

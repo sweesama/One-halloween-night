@@ -4,9 +4,11 @@
 
 This site is an unofficial fan guide, not affiliated with the developer or itch.io. Official page: https://ollienoseworthy.itch.io/one-halloween-night
 
+People also search "One Halloween". That shorter name is shared with a short film by Rebecca Murga (The Movie Database lists it as a 2017 PG short of about 15 minutes; the IMDb page tt5839838 is titled in search listings as a 2016 short). It is not this game. The homepage is the page that explains the difference: https://www.onehalloweennight.net/#what-is-one-halloween
+
 ## Guides
 
-- [Home](https://www.onehalloweennight.net/): overview, quick facts, download links
+- [Home](https://www.onehalloweennight.net/): what One Halloween refers to, game overview, quick facts, download links
 - [Walkthrough](https://www.onehalloweennight.net/walkthrough): step-by-step guide to the whole night
 - [Endings](https://www.onehalloweennight.net/endings): both endings (Hide = rescued, Escape the house = caught) and how to see both
 - [Download](https://www.onehalloweennight.net/download): Windows install steps; availability on Steam, Mac, PS5, mobile, browser

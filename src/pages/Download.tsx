@@ -6,7 +6,7 @@ function Download() {
     <PageShell
       path="/download"
       h1="How to Download One Halloween Night"
-      intro={<p><strong>One Halloween Night is a free download for Windows PC on itch.io.</strong> You get a zip file of about 669 MB: extract it and run the .exe. There is no Steam, console, Mac, mobile or browser version. Install steps, platform answers and common fixes are below.</p>}
+      intro={<p><strong><In to="/">One Halloween Night</In> is a free download for Windows PC on itch.io.</strong> You get a zip file of about 669 MB: extract it and run the .exe. There is no Steam, console, Mac, mobile or browser version. Install steps, platform answers and common fixes are below. This page is the install guide for the game, not the short film One Halloween. <In to="/#what-is-one-halloween">What One Halloween is</In> is on the game page.</p>}
     >
       <Section id="facts" title="Quick facts">
         <table>
