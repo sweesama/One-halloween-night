@@ -21,8 +21,9 @@ export interface RouteMeta {
   faq?: FaqItem[]
 }
 
-// Homepage FAQ targets the short query "one halloween". Keep these questions off
-// /faq so the two pages do not publish duplicate FAQPage schema.
+// Homepage FAQ targets the short query "one halloween", plus one disambiguation
+// for "halloween horror night game". Keep these questions off /faq so the two
+// pages do not publish duplicate FAQPage schema.
 export const FAQ_HOME: FaqItem[] = [
   {
     q: 'What is One Halloween?',
@@ -31,6 +32,10 @@ export const FAQ_HOME: FaqItem[] = [
   {
     q: 'Is the movie One Halloween the same as One Halloween Night?',
     a: 'No. One Halloween is a short film directed and co-written by Rebecca Murga. Her site describes it as an HBO short about a Colombian-born veteran spending one Halloween night with his 10-year-old daughter after coming home from the hospital. The Movie Database lists it as One Halloween (2017), about 15 minutes, rated PG. The IMDb page is tt5839838, and search listings title that page as a 2016 short, so the year is listed both ways. It is not a horror game and there is nothing to download.',
+  },
+  {
+    q: 'Is One Halloween Night the Halloween Horror Night game?',
+    a: 'No. Halloween Horror Nights is Universal Studios\' annual theme-park event, and the name some people use for related games. One Halloween Night is a separate, independent, free horror game, and a full run takes about 25 minutes. It is not affiliated with Universal. Solo developer ollienoseworthy made it in Unity and released it on itch.io in October 2025. You play a teenage boy left home alone to hand out candy. Halloween: The Game (IllFonic, September 8, 2026), the Michael Myers game, is a different title that also shows up for this wording.',
   },
   {
     q: 'Is One Halloween Night on Steam?',
