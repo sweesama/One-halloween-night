@@ -137,7 +137,10 @@ function Home() {
       <section className="relative z-10 container mx-auto px-4 py-12 max-w-4xl text-halloween-light text-lg leading-relaxed">
         <h2 className="halloween-title text-3xl md:text-4xl text-halloween-orange text-center mb-6">A short game for one Halloween</h2>
         <p className="mb-4">
-          Looking for one Halloween horror night game? One Halloween Night is built around that evening, and it fits into a single sitting:
+          One Halloween Night is a Halloween horror night game for Windows. It is free and first-person: you play a teenage boy left home alone to hand out candy, and the developer calls that night a realistic home-invasion horror experience. A full run takes about 25 minutes, and one choice near the end decides which of the two endings you get.
+        </p>
+        <p className="mb-4">
+          It is built around that evening, and it fits into a single sitting:
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li><strong>Short:</strong> about 25 minutes from the first doorbell to the ending, so it works between trick-or-treaters or before a movie.</li>

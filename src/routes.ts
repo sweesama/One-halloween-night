@@ -21,9 +21,10 @@ export interface RouteMeta {
   faq?: FaqItem[]
 }
 
-// Homepage FAQ targets the short query "one halloween", plus one disambiguation
-// for "halloween horror night game". Keep these questions off /faq so the two
-// pages do not publish duplicate FAQPage schema.
+// Homepage FAQ targets the short query "one halloween" and the phrasing
+// "Halloween horror night game". "Halloween Horror Nights" (Universal's
+// theme-park event) appears only in the disclaimer question below.
+// Keep these questions off /faq so the two pages do not publish duplicate FAQPage schema.
 export const FAQ_HOME: FaqItem[] = [
   {
     q: 'What is One Halloween?',
@@ -34,8 +35,12 @@ export const FAQ_HOME: FaqItem[] = [
     a: 'No. One Halloween is a short film directed and co-written by Rebecca Murga. Her site describes it as an HBO short about a Colombian-born veteran spending one Halloween night with his 10-year-old daughter after coming home from the hospital. The Movie Database lists it as One Halloween (2017), about 15 minutes, rated PG. The IMDb page is tt5839838, and search listings title that page as a 2016 short, so the year is listed both ways. It is not a horror game and there is nothing to download.',
   },
   {
-    q: 'Is One Halloween Night the Halloween Horror Night game?',
-    a: 'No. Halloween Horror Nights is Universal Studios\' annual theme-park event, and the name some people use for related games. One Halloween Night is a separate, independent, free horror game, and a full run takes about 25 minutes. It is not affiliated with Universal. Solo developer ollienoseworthy made it in Unity and released it on itch.io in October 2025. You play a teenage boy left home alone to hand out candy. Halloween: The Game (IllFonic, September 8, 2026), the Michael Myers game, is a different title that also shows up for this wording.',
+    q: 'Is One Halloween Night a Halloween horror night game?',
+    a: 'Yes. One Halloween Night is a free first-person horror game for Windows. You play a teenage boy left home alone to hand out candy, and the developer calls it a realistic home-invasion horror experience. Solo developer ollienoseworthy made it in Unity and released it on itch.io in October 2025. A full run takes about 25 minutes and has two endings.',
+  },
+  {
+    q: 'Is One Halloween Night related to Universal\'s Halloween Horror Nights?',
+    a: 'No. One Halloween Night is an unrelated indie game. It is not affiliated with Universal or its theme-park event, Halloween Horror Nights. Solo developer ollienoseworthy made this free Windows game in Unity and released it on itch.io in October 2025. You play a teenage boy left home alone to hand out candy, and a full run takes about 25 minutes.',
   },
   {
     q: 'Is One Halloween Night on Steam?',
@@ -74,8 +79,8 @@ export const ROUTES: RouteMeta[] = [
   {
     path: '/',
     label: 'Home',
-    title: 'One Halloween Night: Free 25-Min Horror Game',
-    description: 'Looking up One Halloween? This is One Halloween Night, a free 25-minute Windows horror game. Download it, with the walkthrough and both endings.',
+    title: 'One Halloween Night: Free 25-Min Halloween Horror Night Game',
+    description: 'Looking up One Halloween? One Halloween Night is a free 25-minute Windows Halloween horror night game. Download it, with the walkthrough and both endings.',
     priority: '1.0', changefreq: 'weekly',
     faq: FAQ_HOME,
   },
