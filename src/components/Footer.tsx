@@ -11,6 +11,7 @@ function Footer() {
             <div className="flex flex-col gap-2">
               {[
                 ['/', 'One Halloween Night'],
+                ['/halloween-horror-night-game', 'Halloween horror night game'],
                 ['/walkthrough', 'Walkthrough'], ['/endings', 'Endings explained'], ['/download', 'Download & install'],
                 ['/gameplay', 'How to play'], ['/games-like-one-halloween-night', 'Games like One Halloween Night'],
                 ['/videos', 'Videos'], ['/reviews', 'Review'], ['/faq', 'FAQ'],

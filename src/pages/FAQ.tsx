@@ -6,7 +6,7 @@ function FAQ() {
     <PageShell
       path="/faq"
       h1="One Halloween Night FAQ"
-      intro={<><p>Quick answers to the most common questions about <In to="/">One Halloween Night</In>, the free Windows horror game. For more detail, see the <In to="/download">download guide</In>, the <In to="/walkthrough">walkthrough</In> and the <In to="/endings">endings guide</In>.</p><p className="mt-4">The words One Halloween also name a short film by Rebecca Murga, plus a song from the musical Applause. Those are not this game. <In to="/#what-is-one-halloween">What One Halloween refers to</In> is explained on the game page, which is the page to open for the game itself.</p></>}
+      intro={<><p>Quick answers to the most common questions about <In to="/">One Halloween Night</In>, the free Windows horror game. For more detail, see the <In to="/download">download guide</In>, the <In to="/walkthrough">walkthrough</In> and the <In to="/endings">endings guide</In>.</p><p className="mt-4">The words One Halloween also name a short film by Rebecca Murga, plus a song from the musical Applause. Those are not this game. <In to="/#what-is-one-halloween">What One Halloween refers to</In> is explained on the game page, which is the page to open for the game itself.</p><p className="mt-4">If you wanted a <In to="/halloween-horror-night-game">Halloween horror night game</In> to play at home, that is a different page. It is not Universal's Halloween Horror Nights.</p></>}
     >
       <Section title="Frequently asked questions">
         {FAQ_GENERAL.map((f) => (

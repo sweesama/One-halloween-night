@@ -12,6 +12,7 @@ import FAQ from './pages/FAQ'
 import Walkthrough from './pages/Walkthrough'
 import Download from './pages/Download'
 import SimilarGames from './pages/SimilarGames'
+import HalloweenHorrorNightGame from './pages/HalloweenHorrorNightGame'
 import NotFound from './pages/NotFound'
 
 // Decorative floating emoji. Positions come from a fixed-seed generator (not Math.random)
@@ -64,6 +65,7 @@ function App() {
           <Route path="/walkthrough" element={<Walkthrough />} />
           <Route path="/download" element={<Download />} />
           <Route path="/games-like-one-halloween-night" element={<SimilarGames />} />
+          <Route path="/halloween-horror-night-game" element={<HalloweenHorrorNightGame />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 

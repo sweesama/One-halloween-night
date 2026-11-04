@@ -65,6 +65,7 @@ export function ItchButton({ label = 'Get it free on itch.io' }: { label?: strin
 
 const GUIDES = [
   { to: '/', t: 'One Halloween Night', d: 'What the free horror game is, plus facts and where to download it' },
+  { to: '/halloween-horror-night-game', t: 'Halloween horror night game', d: 'A free game to play at home, not the theme-park event' },
   { to: '/walkthrough', t: 'Full walkthrough', d: 'Every step from the candy bowl to the final choice' },
   { to: '/endings', t: 'Both endings explained', d: 'How to get the hide and escape endings' },
   { to: '/download', t: 'Download & install', d: 'Windows install steps, Steam, Mac and mobile' },

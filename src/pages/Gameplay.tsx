@@ -5,7 +5,7 @@ function Gameplay() {
     <PageShell
       path="/gameplay"
       h1="How to Play One Halloween Night"
-      intro={<p><In to="/">One Halloween Night</In> is a short first-person horror game. You walk around a house, talk to people and pick things up. There is no combat and no inventory. A run takes about 25 minutes, and one choice at the end decides between two endings. <In to="/#what-is-one-halloween">What One Halloween is</In>, and what it is not, is on the game page.</p>}
+      intro={<p><In to="/">One Halloween Night</In> is a short first-person horror game. You walk around a house, talk to people and pick things up. There is no combat and no inventory. A run takes about 25 minutes, and one choice at the end decides between two endings. <In to="/#what-is-one-halloween">What One Halloween is</In>, and what it is not, is on the game page. If you came looking for a <In to="/halloween-horror-night-game">Halloween horror night game</In> to play, that page is the short answer.</p>}
     >
       <Section id="controls" title="Controls">
         <table>

@@ -12,6 +12,7 @@ export const OG = {
   endings: ['Both Endings Explained', 'Hide or escape? What each choice leads to'],
   download: ['How to Download', 'Windows install guide · Steam, Mac & mobile'],
   gameplay: ['How to Play', 'Controls, length and beginner tips'],
+  'halloween-horror-night-game': ['Horror Night Game', 'A free Windows game to play, not the park event'],
   'games-like-one-halloween-night': ['Games Like It', '7 home-alone and Halloween horror games for PC'],
   videos: ['Gameplay Videos', 'Full playthroughs with timestamps for both endings'],
   reviews: ['Review', 'Is it worth playing? What players like and criticize'],

@@ -140,6 +140,9 @@ function Home() {
           One Halloween Night is a Halloween horror night game for Windows. It is free and first-person: you play a teenage boy left home alone to hand out candy, and the developer calls that night a realistic home-invasion horror experience. A full run takes about 25 minutes, and one choice near the end decides which of the two endings you get.
         </p>
         <p className="mb-4">
+          Searching for a <In to="/halloween-horror-night-game">Halloween horror night game</In> to play at home? That page is the short version, including why this is not Universal's Halloween Horror Nights event. This page stays the guide to the game named One Halloween Night.
+        </p>
+        <p className="mb-4">
           It is built around that evening, and it fits into a single sitting:
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-4">
