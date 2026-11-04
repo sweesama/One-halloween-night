@@ -70,7 +70,7 @@ function SimilarGames() {
       ))}
 
       <Section id="haven-t-played" title="Haven't played One Halloween Night yet?">
-        <p>It's free, about 25 minutes long, and a good one to play on Halloween night itself. See <In to="/download">how to download it</In>, then use the <In to="/walkthrough">walkthrough</In> and the <In to="/endings">endings guide</In> if you need them.</p>
+        <p>It's free, about 25 minutes long, and a good one to play on Halloween night itself. If you only want <In to="/halloween-horror-night-game">one Halloween horror night game</In> before this list, that page covers what you play and how it differs from the theme-park event. See <In to="/download">how to download it</In>, then use the <In to="/walkthrough">walkthrough</In> and the <In to="/endings">endings guide</In> if you need them.</p>
       </Section>
     </PageShell>
   )

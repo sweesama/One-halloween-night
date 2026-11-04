@@ -70,7 +70,7 @@ function Download() {
       </Section>
 
       <Section title="After installing">
-        <p>New to the game? Read <In to="/gameplay">how to play</In> for controls and tips, follow the <In to="/walkthrough">walkthrough</In> if you get stuck, or check the <In to="/endings">endings guide</In> once you finish.</p>
+        <p>New to the game? Read <In to="/gameplay">how to play</In> for controls and tips, follow the <In to="/walkthrough">walkthrough</In> if you get stuck, or check the <In to="/endings">endings guide</In> once you finish. If you searched for a <In to="/halloween-horror-night-game">Halloween horror night game</In> to play, that page explains the game and why it is not Universal's park event. This page is only the install guide.</p>
       </Section>
     </PageShell>
   )

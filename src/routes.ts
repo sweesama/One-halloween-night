@@ -21,10 +21,11 @@ export interface RouteMeta {
   faq?: FaqItem[]
 }
 
-// Homepage FAQ targets the short query "one halloween" and the phrasing
-// "Halloween horror night game". "Halloween Horror Nights" (Universal's
-// theme-park event) appears only in the disclaimer question below.
-// Keep these questions off /faq so the two pages do not publish duplicate FAQPage schema.
+// Homepage FAQ targets the short query "one halloween". The generic query
+// "halloween horror night game" belongs to /halloween-horror-night-game.
+// "Halloween Horror Nights" (Universal's theme-park event) appears only in
+// the disclaimer question below. Keep these questions off /faq and off
+// /halloween-horror-night-game so the pages do not publish duplicate FAQPage schema.
 export const FAQ_HOME: FaqItem[] = [
   {
     q: 'What is One Halloween?',
@@ -66,6 +67,22 @@ export const FAQ_GENERAL: FaqItem[] = [
   { q: 'What are the controls?', a: 'W, A, S, D to move, mouse to look, left mouse button to interact and advance dialogue, and right mouse button to throw or drop an object.' },
   { q: 'Is One Halloween Night scary?', a: 'It is a slow-burn, realistic home-invasion horror game. Most of the playtime is calm Halloween chores and conversations, with the tension building toward a few scares near the end. It has jumpscares and an intruder, so it may not suit young children.' },
   { q: 'Who made One Halloween Night?', a: 'It was made in the Unity engine by the solo developer ollienoseworthy and released on itch.io in October 2025.' },
+]
+
+// Questions for /halloween-horror-night-game. Do not repeat FAQ_HOME or FAQ_GENERAL.
+export const FAQ_HORROR_NIGHT: FaqItem[] = [
+  {
+    q: 'What is a good Halloween horror night game to play for free?',
+    a: 'One Halloween Night is a free Windows horror game about a single Halloween spent home alone. Solo developer ollienoseworthy released it on itch.io in October 2025. You hand out candy, then deal with an intruder. A full run takes about 25 minutes and has two endings. It is a game you download and play, not a theme-park ticket.',
+  },
+  {
+    q: 'Is this page about Universal\'s Halloween Horror Nights?',
+    a: 'No. Halloween Horror Nights is Universal\'s seasonal theme-park event, with haunted houses and scare zones you attend in person. This site is not a Universal page, and it does not sell tickets or maps for that event. One Halloween Night is a separate free indie game for Windows.',
+  },
+  {
+    q: 'How long does a Halloween horror night game like this take?',
+    a: 'The developer says about 25 minutes for one ending, so it fits a single evening. Seeing the other ending takes a little longer because you replay the last choice, not the whole night. You need a Windows PC. There is no official browser version.',
+  },
 ]
 
 export const FAQ_ENDINGS: FaqItem[] = [
@@ -112,6 +129,14 @@ export const ROUTES: RouteMeta[] = [
     title: 'How to Play One Halloween Night: Controls, Length & Tips',
     description: 'How to play One Halloween Night: WASD and mouse controls, how long it takes, how the candy, chores and choice work, plus tips for a smoother first run.',
     priority: '0.8', changefreq: 'monthly',
+  },
+  {
+    path: '/halloween-horror-night-game',
+    label: 'Horror Night Game',
+    title: 'Halloween Horror Night Game to Play Free on Windows',
+    description: 'A free Halloween horror night game for Windows, about 25 minutes. Not Universal\'s Halloween Horror Nights. Download, walkthrough and both endings.',
+    priority: '0.8', changefreq: 'monthly',
+    faq: FAQ_HORROR_NIGHT,
   },
   {
     path: '/games-like-one-halloween-night',

@@ -32,7 +32,7 @@ function Reviews() {
     >
       <Section id="verdict" title="Verdict">
         <ul>
-          <li><strong>Play it if</strong> you like short, realistic, slow-burn horror in the style of Fears to Fathom, and want something for Halloween night itself.</li>
+          <li><strong>Play it if</strong> you like short, realistic, slow-burn horror in the style of Fears to Fathom, and want <In to="/halloween-horror-night-game">a Halloween horror night game</In> for the evening itself.</li>
           <li><strong>Skip it if</strong> you want constant scares, combat or a long game. Most of the 25 minutes is calm build-up.</li>
           <li><strong>Cost:</strong> free, so the only cost is about half an hour.</li>
         </ul>
